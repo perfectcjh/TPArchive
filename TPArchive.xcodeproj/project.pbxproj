@@ -15,6 +15,7 @@
 		305B441520CE6DF700DF8DD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 305B441420CE6DF700DF8DD9 /* main.m */; };
 		305B441F20CE6DF800DF8DD9 /* TPArchiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 305B441E20CE6DF800DF8DD9 /* TPArchiveTests.m */; };
 		305B442A20CE6DF800DF8DD9 /* TPArchiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 305B442920CE6DF800DF8DD9 /* TPArchiveUITests.m */; };
+		305B443A20CE725F00DF8DD9 /* UnrarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305B443920CE725F00DF8DD9 /* UnrarKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		305B442520CE6DF800DF8DD9 /* TPArchiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPArchiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		305B442920CE6DF800DF8DD9 /* TPArchiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPArchiveUITests.m; sourceTree = "<group>"; };
 		305B442B20CE6DF800DF8DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305B443920CE725F00DF8DD9 /* UnrarKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnrarKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				305B443A20CE725F00DF8DD9 /* UnrarKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 				305B440620CE6DF500DF8DD9 /* AppDelegate.m */,
 				305B440820CE6DF500DF8DD9 /* ViewController.h */,
 				305B440920CE6DF500DF8DD9 /* ViewController.m */,
+				305B443720CE722D00DF8DD9 /* TPArchive */,
 				305B440B20CE6DF500DF8DD9 /* Main.storyboard */,
 				305B440E20CE6DF700DF8DD9 /* Assets.xcassets */,
 				305B441020CE6DF700DF8DD9 /* LaunchScreen.storyboard */,
@@ -130,6 +134,22 @@
 				305B442B20CE6DF800DF8DD9 /* Info.plist */,
 			);
 			path = TPArchiveUITests;
+			sourceTree = "<group>";
+		};
+		305B443720CE722D00DF8DD9 /* TPArchive */ = {
+			isa = PBXGroup;
+			children = (
+				305B443820CE723F00DF8DD9 /* lib */,
+			);
+			path = TPArchive;
+			sourceTree = "<group>";
+		};
+		305B443820CE723F00DF8DD9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				305B443920CE725F00DF8DD9 /* UnrarKit.framework */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +455,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 753B3ACW59;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TPArchive/TPArchive/lib",
+				);
 				INFOPLIST_FILE = TPArchive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,6 +477,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 753B3ACW59;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TPArchive/TPArchive/lib",
+				);
 				INFOPLIST_FILE = TPArchive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
